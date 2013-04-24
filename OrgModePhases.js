@@ -73,11 +73,20 @@ var tsFargo = {
     return out.join('<br />\n');
   },
   msgMe: function(msgTxt){
-  	$("#idSavingMessage").hide();
-  	$("#idSavingMessage").html(msgTxt);
-  	$("#idSavingMessage").fadeIn(600,function(){
-  		$("#idSavingMessage").fadeOut(300);
-  		$("#idSavingMessage").show();
+  	var myMsgDiv = $('#idHidableSidebarMsg');
+	if(myMsgDiv.length === 0){
+    		myMsgDiv = $('<div class="divExplanation" id="idHidableSidebarMsg"><span id="idHidableSidebarMsgTxt"></span></div>   ')
+        	.appendTo('#idHidableSidebar')
+        	.css('opacity', 0);     
+	}
+	var myMsg = $("#idHidableSidebarMsg");
+
+  	myMsgDiv.hide();
+  	myMsg.html(msgTxt);
+  	myMsgDiv.fadeIn(600,function(){
+  		myMsgDiv.fadeOut(300);
+  		myMsg.html('');
+  		myMsgDiv.show();
   	});
   	
   },
