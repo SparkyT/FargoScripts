@@ -75,7 +75,7 @@ var tsFargo = {
   msgMe: function(msgTxt){
   	var myMsgDiv = $('#idHidableSidebarMsg');
 	if(myMsgDiv.length === 0){
-    		myMsgDiv = $('<div class="divExplanation" id="idHidableSidebarMsg"><span id="idHidableSidebarMsgTxt"></span></div>   ')
+    		myMsgDiv = $('<div class="divExplanation" id="idHidableSidebarMsg" style="font-weight: bold; color: silver;"><span id="idHidableSidebarMsgTxt"></span></div>   ')
         	.appendTo('#idHidableSidebar');    
 	}
 	var myMsg = $("#idHidableSidebarMsgTxt");
