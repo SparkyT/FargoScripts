@@ -54,3 +54,32 @@ $(document).bind('keydown', function(event) {
         } 
     }
 });
+
+var tsFargo = {
+  module:   "tsFargo",
+  version:  "0.1",
+  
+  id: function() {
+    var s = this.module + " " + this.version;
+    console.log(s);
+    return s;
+  },
+  inspect: function(obj) {
+    var out = [];
+    for(var p in obj) {
+      var t = typeof obj[p];
+      out.push(t + ":" + p + " = " + obj[p]);
+    }
+    return out.join('<br />\n');
+  },
+  msgMe: function(msgTxt){
+  	$(".idSavingMessage").hide();
+  	$(".idSavingMessage").innerHTML=msgTxt;
+  	$(".idSavingMessage").fadeIn(400,function(){
+  		$(".idSavingMessage").fadeOut(200);
+  		$(".idSavingMessage").show();
+  	});
+  	
+  }
+ 
+}
