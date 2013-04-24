@@ -74,12 +74,12 @@ var tsFargo = {
   },
   msgMe: function(msgTxt){
   	$(".idSavingMessage").hide();
-  	$(".idSavingMessage").innerHTML=msgTxt;
+  	$(".idSavingMessage").html(msgTxt);
   	$(".idSavingMessage").fadeIn(400,function(){
   		$(".idSavingMessage").fadeOut(200);
   		$(".idSavingMessage").show();
   	});
   	
-  }
+  },
  
 }
