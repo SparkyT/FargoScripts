@@ -79,7 +79,7 @@ var tsFargo = {
         	.appendTo('#idHidableSidebar')
         	.css('opacity', 0);     
 	}
-	var myMsg = $("#idHidableSidebarMsg");
+	var myMsg = $("#idHidableSidebarMsgTxt");
 
   	myMsgDiv.hide();
   	myMsg.html(msgTxt);
