@@ -75,8 +75,8 @@ var tsFargo = {
   msgMe: function(msgTxt){
   	$("#idSavingMessage").hide();
   	$("#idSavingMessage").html(msgTxt);
-  	$("#idSavingMessage").fadeIn(400,function(){
-  		$("#idSavingMessage").fadeOut(200);
+  	$("#idSavingMessage").fadeIn(600,function(){
+  		$("#idSavingMessage").fadeOut(300);
   		$("#idSavingMessage").show();
   	});
   	
