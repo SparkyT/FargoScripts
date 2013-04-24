@@ -73,11 +73,11 @@ var tsFargo = {
     return out.join('<br />\n');
   },
   msgMe: function(msgTxt){
-  	$(".idSavingMessage").hide();
-  	$(".idSavingMessage").html(msgTxt);
-  	$(".idSavingMessage").fadeIn(400,function(){
-  		$(".idSavingMessage").fadeOut(200);
-  		$(".idSavingMessage").show();
+  	$("#idSavingMessage").hide();
+  	$("#idSavingMessage").html(msgTxt);
+  	$("#idSavingMessage").fadeIn(400,function(){
+  		$("#idSavingMessage").fadeOut(200);
+  		$("#idSavingMessage").show();
   	});
   	
   },
