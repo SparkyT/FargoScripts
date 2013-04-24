@@ -76,8 +76,7 @@ var tsFargo = {
   	var myMsgDiv = $('#idHidableSidebarMsg');
 	if(myMsgDiv.length === 0){
     		myMsgDiv = $('<div class="divExplanation" id="idHidableSidebarMsg"><span id="idHidableSidebarMsgTxt"></span></div>   ')
-        	.appendTo('#idHidableSidebar')
-        	.css('opacity', 0);     
+        	.appendTo('#idHidableSidebar');    
 	}
 	var myMsg = $("#idHidableSidebarMsgTxt");
 
