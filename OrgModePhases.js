@@ -88,6 +88,6 @@ var tsFargo = {
   		myMsgDiv.show();
   	});
   	
-  },
+  }
  
 }
