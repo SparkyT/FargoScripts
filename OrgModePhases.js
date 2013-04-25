@@ -72,7 +72,10 @@ var tsFargo = {
     }
     return out.join('<br />\n');
   },
-  msgMe: function(msgTxt){
+  msgMe: function(msgTxt,fadeInTime, fadeOutTime){
+  	fadeInTime = typeof fadeInTime !== undefined ? fadeInTime : 600;
+  	fadeOutTime = typeof fadeOutTime !== undefined ? fadeOutTime : 300;
+  	
   	var myMsgDiv = $('#idHidableSidebarMsg');
 	if(myMsgDiv.length === 0){
     		myMsgDiv = $('<div class="divExplanation" id="idHidableSidebarMsg" style="font-weight: bold; color: silver;"><span id="idHidableSidebarMsgTxt"></span></div>   ')
@@ -82,12 +85,16 @@ var tsFargo = {
 
   	myMsgDiv.hide();
   	myMsg.html(msgTxt);
-  	myMsgDiv.fadeIn(600,function(){
-  		myMsgDiv.fadeOut(300);
-  		myMsg.html('');
-  		myMsgDiv.show();
+  	myMsgDiv.fadeIn(fadeInTime,function(){
+  		if(fadeOutTime==-1){
+  			myMsgDiv.fadeOut(fadeOutTime);
+  			myMsg.html('');
+  			myMsgDiv.show();
+  		}
+  		
+  		
   	});
- myMsg.html('<a href="http://reader.smallpicture.com/?opmlurl=https%3A%2F%2Fdl.dropbox.com%2Fs%2Fbsscqwmtkw8tkco%2Fpopuptest.opml">Reader</a>'); 	
-  }
+ 
+  },
  
 }
