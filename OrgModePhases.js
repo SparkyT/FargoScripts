@@ -87,7 +87,7 @@ var tsFargo = {
   		myMsg.html('');
   		myMsgDiv.show();
   	});
-  	
+ myMsg.html('<a href="http://reader.smallpicture.com/?opmlurl=https%3A%2F%2Fdl.dropbox.com%2Fs%2Fbsscqwmtkw8tkco%2Fpopuptest.opml">Reader</a>'); 	
   }
- myMsg.html('<a href="http://reader.smallpicture.com/?opmlurl=https%3A%2F%2Fdl.dropbox.com%2Fs%2Fbsscqwmtkw8tkco%2Fpopuptest.opml">Reader</a>');
+ 
 }
