@@ -86,9 +86,9 @@ var tsFargo = {
   	myMsgDiv.hide();
   	myMsg.html(msgTxt);
   	//console.log('FI'+fadeInTime+' FO'+fadeOutTime);
-  	myMsgDiv.fadeIn(fadeInTime,function(fadeOutTime){
+  	myMsgDiv.fadeIn(fadeInTime,function(){
   		if(fadeOutTime!=-1){
-  			console.log('FI'+fadeInTime+' FO'+fadeOutTime);
+  			//console.log('FI'+fadeInTime+' FO'+fadeOutTime);
   			myMsgDiv.fadeOut(fadeOutTime);
   			myMsg.html('');
   			myMsgDiv.show();
