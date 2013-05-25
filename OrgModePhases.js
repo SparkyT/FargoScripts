@@ -99,5 +99,17 @@ var tsFargo = {
   	});
  
   },
+  tsFS:				function fileShare (){
+					var tab = smallTabs.getActiveTab ();
+					var tabTitle = tab.getTitle();
+					var tabUrl = tab.url;
+					if(tab.flEditable && (tab.url!==undefined)){
+						confirmDialog ("Create a public link for the \""+tabTitle+"\" file?",function(){
+							vendor.createSharedUrl(tabUrl, function(publicUrl){
+								msgMe(publicURL);
+								});
+							});
+						}
+					}
  
 }
