@@ -106,7 +106,7 @@ var tsFargo = {
 					if(tab.flEditable && (tab.url!==undefined)){
 						confirmDialog ("Create a public link for the \""+tabTitle+"\" file?",function(){
 							vendor.createSharedUrl(tabUrl, function(publicUrl){
-								msgMe(publicUrl);
+								tsFargo.msgMe(publicUrl);
 								});
 							});
 						}
