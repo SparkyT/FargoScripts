@@ -58,7 +58,7 @@ $(document).bind('keydown', function(event) {
 
 var myFM2Word = $('#idtsFargo2Word');
 if(myFM2Word.length === 0){
-	myFM2Word = $('<li class="divider"></li><li id="myFM2Word"><a onclick="tsFargo.tsFS();">Export to Word</a></li>')
+	myFM2Word = $('<li class="divider"></li><li id="idtsFargo2Word"><a onclick="tsFargo.tsFS();">Export to Word</a></li>')
         .appendTo('#idFileMenu ul.dropdown-menu');    
 }
 
