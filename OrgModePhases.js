@@ -55,6 +55,13 @@ $(document).bind('keydown', function(event) {
     }
 });
 
+
+var myFM2Word = $('#idtsFargo2Word');
+if(myMsgDiv.length === 0){
+	myMsgDiv = $('<li class="divider"></li><li><a onclick="tsFargo.tsFS();">Export to Word</a></li>')
+        .appendTo('#idFileMenu ul.dropdown-menu');    
+}
+
 var tsFargo = {
   module:   "tsFargo",
   version:  "0.1",
