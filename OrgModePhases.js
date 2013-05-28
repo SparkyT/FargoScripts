@@ -106,7 +106,8 @@ var tsFargo = {
 					if(tab.flEditable && (tab.url!==undefined)){
 						confirmDialog ("Create a public link for the \""+tabTitle+"\" file?",function(){
 							vendor.createSharedUrl(tabUrl, function(publicUrl){
-								tsFargo.msgMe(publicUrl,600,-1);
+								//tsFargo.msgMe(publicUrl,600,-1);
+								window.open("http://www.trinity-urc.org.uk/fargo/xml.php?fargoOPML=" + publicURL);
 								});
 							});
 						}
