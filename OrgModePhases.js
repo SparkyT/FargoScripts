@@ -128,6 +128,7 @@ var tsFargo = {
 								}
 							);
 						}
+  				},	
 /*						
 					if(tab.flEditable && (tab.url!==undefined)){
 						confirmDialog ("Create a public link for the \""+tabTitle+"\" file?",function(){
