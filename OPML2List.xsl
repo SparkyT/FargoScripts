@@ -38,7 +38,9 @@
     </xsl:template>
     <!-- Show the outline nodes -->
     <xsl:template match="outline">
-        <li><xsl:value-of select="count(ancestor::outline)" /> <xsl:value-of select="@text" /><xsl:if test="@_note"> [<xsl:value-of select="@_note" />]</xsl:if>
+        <li> <xsl:element name="h{count(ancestor::outline)}">
+                <xsl:value-of select="count(ancestor::outline)+1" /> <xsl:value-of select="@text" /><xsl:if test="@_note"> [<xsl:value-of select="@_note" />]</xsl:if>
+             </xsl:element>
             <xsl:if test="count(child::outline) > 0">
             <!-- Show child outline nodes -->
             <ol>
