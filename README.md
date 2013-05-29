@@ -1,6 +1,6 @@
 # Fargo Scripts
 
-At the moment, just adds an Export to HTML list menu item.
+At the moment, just adds an Export to HTML list menu item to the file menu.
 
 # To Use
 
