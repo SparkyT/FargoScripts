@@ -118,16 +118,19 @@ var tsFargo = {
 					var tabUrl = tab.url;
 					// direct from fargo.io;
 					var tab = smallTabs.getActiveTab ();
+					var tsFSURL='';
 					var baseurl = "http://www.trinity-urc.org.uk/fargo/xml.php?fargoOPML=";
 					if (tab.type == "watchedOutline") {
-						window.open (baseurl + encodeURIComponent (tab.url),'_blank');
+						tsFSURL=baseurl + encodeURIComponent (tab.url);
+						//window.open (baseurl + encodeURIComponent (tab.url),'_blank');
 						//$('#idtsFargo2WordLink').attr('href',baseurl + encodeURIComponent (tab.url));
 						//$('#idtsFargo2WordLink').click();
 						//$('#idtsFargo2WordLink').attr('href','#');
 						}
 					else {
 						vendor.createSharedUrl (tab.url, function (publicUrl) {
-							window.open (baseurl + encodeURIComponent (publicUrl),'_blank');
+							tsFSURL=baseurl + encodeURIComponent (publicUrl);
+							//window.open (baseurl + encodeURIComponent (publicUrl),'_blank');
 							//$('#idtsFargo2WordLink').attr('href',baseurl + encodeURIComponent (publicUrl));
 							//$('#idtsFargo2WordLink').click();
 							//$('#idtsFargo2WordLink').attr('href','#');
@@ -137,6 +140,11 @@ var tsFargo = {
 								}
 							);
 						}
+					if (tsFSURL!='')
+					{
+						window.open (tsFSURL,'_blank');
+					}
+					
   				},	
 /*						
 					if(tab.flEditable && (tab.url!==undefined)){
