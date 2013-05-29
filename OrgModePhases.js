@@ -142,11 +142,13 @@ var tsFargo = {
 								}
 							);
 						}
-						alert(tsFSURL);
+						
 					while(tsFSURL=='')
 					{
 						
+						
 					}
+					alert(tsFSURL);
 					if (tsFSURL!='failed')
 					{
 						window.open (tsFSURL,'_blank');
