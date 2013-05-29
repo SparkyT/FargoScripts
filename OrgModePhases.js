@@ -61,7 +61,7 @@ $(document).bind('keydown', function(event) {
 
 var myFM2Word = $('#idtsFargo2Word');
 if(myFM2Word.length === 0){
-	myFM2Word = $('<li class="divider"></li><li id="idtsFargo2Word"><a onclick="tsFargo.tsFS();">* Export to Word</a></li>')
+	myFM2Word = $('<li class="divider"></li><li id="idtsFargo2Word"><a id="idtsFargo2WordLink" onclick="tsFargo.tsFS();">* Export to Word</a></li>')
         .appendTo('#idFileMenu ul.dropdown-menu');    
 }
 
@@ -117,11 +117,13 @@ var tsFargo = {
 					var tab = smallTabs.getActiveTab ();
 					var baseurl = "http://www.trinity-urc.org.uk/fargo/xml.php?fargoOPML=";
 					if (tab.type == "watchedOutline") {
-						window.open (baseurl + encodeURIComponent (tab.url));
+						//window.open (baseurl + encodeURIComponent (tab.url));
+						$('#idtsFargo2WordLink').attr('href',baseurl + encodeURIComponent (tab.url));
 						}
 					else {
 						vendor.createSharedUrl (tab.url, function (publicUrl) {
-							window.open (baseurl + encodeURIComponent (publicUrl));
+							//window.open (baseurl + encodeURIComponent (publicUrl));
+							$('#idtsFargo2WordLink').attr('href',baseurl + encodeURIComponent (publicUrl));
 							},
 							function () {
 								alertDialog ("Can't open the outline \"" + tab.title + "\" in Taco Pie."); 
