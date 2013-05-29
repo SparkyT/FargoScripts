@@ -66,7 +66,7 @@ var tsFargo = {
 					//	open window first and retain reference, then set location in callback; 
 					var tab = smallTabs.getActiveTab ();
 					//	TODO - Move to proper server when practical, thanks to Trinity URC admin for the use (that's me)
-					var baseurl = "http://www.trinity-urc.org.uk/fargo/xml.php?fargoOPML=";
+					var baseurl = "http://www.trinity-urc.org.uk/fargo/opml2html.php?fargoOPML=";
 					var w = window.open( baseurl + 'redirecting' );
 					if (tab.type == "watchedOutline") {
 						w.location =baseurl + encodeURIComponent (tab.url);
