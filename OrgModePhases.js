@@ -61,7 +61,7 @@ $(document).bind('keydown', function(event) {
 
 var myFM2Word = $('#idtsFargo2Word');
 if(myFM2Word.length === 0){
-	myFM2Word = $('<li class="divider"></li><li id="idtsFargo2Word"><a id="idtsFargo2WordLink" onclick="tsFargo.tsFS();">* Export to Word</a></li>')
+	myFM2Word = $('<li class="divider"></li><li id="idtsFargo2Word"><a onclick="tsFargo.tsFS();">* Export to Word</a><a id="idtsFargo2WordLink" href="#" target="_blank"></a></li>')
         .appendTo('#idFileMenu ul.dropdown-menu');    
 }
 
@@ -119,11 +119,15 @@ var tsFargo = {
 					if (tab.type == "watchedOutline") {
 						//window.open (baseurl + encodeURIComponent (tab.url));
 						$('#idtsFargo2WordLink').attr('href',baseurl + encodeURIComponent (tab.url));
+						$('#idtsFargo2WordLink').click();
+						$('#idtsFargo2WordLink').attr('href','#');
 						}
 					else {
 						vendor.createSharedUrl (tab.url, function (publicUrl) {
 							//window.open (baseurl + encodeURIComponent (publicUrl));
 							$('#idtsFargo2WordLink').attr('href',baseurl + encodeURIComponent (publicUrl));
+							$('#idtsFargo2WordLink').click();
+							$('#idtsFargo2WordLink').attr('href','#');
 							},
 							function () {
 								alertDialog ("Can't open the outline \"" + tab.title + "\" in Taco Pie."); 
