@@ -64,7 +64,7 @@ if(myFM2Word.length === 0){
 }
 else {
 	myFM2Word.remove();	
-	$('#tsFargo2WordDivider').remove();
+	$('#tsFargoDivider').remove();
 }
 myFM2Word = $('<li id="tsFargoDivider" class="divider"></li><li id="tsFargo2Word"><a onclick="tsFargo.tsFS();">* Export to Word</a><a id="idtsFargo2WordLink" href="#" target="_blank"></a></li>').appendTo('#idFileMenu ul.dropdown-menu');    
 
