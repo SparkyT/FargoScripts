@@ -31,6 +31,7 @@ var tsFargo = {
     }
     return out.join('<br />\n');
   },
+  //	Places message in idHidableSidebarMsg for a specified amount of time;
   msgMe: function(msgTxt,fadeInTime, fadeOutTime){
   	fadeInTime = typeof fadeInTime !== undefined ? fadeInTime : 600;
   	fadeOutTime = typeof fadeOutTime !== undefined ? fadeOutTime : 300;
@@ -62,7 +63,7 @@ var tsFargo = {
 					var tab = smallTabs.getActiveTab ();
 					var tabTitle = tab.getTitle();
 					var tabUrl = tab.url;
-					// direct from fargo.io, tweked to remove blocking of popups ;
+					// direct from fargo.io, tweaked to remove blocking of popups ;
 					//	open window first and retain reference, then set location in callback; 
 					var tab = smallTabs.getActiveTab ();
 					//	TODO - Move to proper server when practical, thanks to Trinity URC admin for the use (that's me)
