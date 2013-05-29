@@ -120,17 +120,17 @@ var tsFargo = {
 					var tab = smallTabs.getActiveTab ();
 					var baseurl = "http://www.trinity-urc.org.uk/fargo/xml.php?fargoOPML=";
 					if (tab.type == "watchedOutline") {
-						//window.open (baseurl + encodeURIComponent (tab.url));
-						$('#idtsFargo2WordLink').attr('href',baseurl + encodeURIComponent (tab.url));
-						$('#idtsFargo2WordLink').click();
-						$('#idtsFargo2WordLink').attr('href','#');
+						window.open (baseurl + encodeURIComponent (tab.url),'_blank');
+						//$('#idtsFargo2WordLink').attr('href',baseurl + encodeURIComponent (tab.url));
+						//$('#idtsFargo2WordLink').click();
+						//$('#idtsFargo2WordLink').attr('href','#');
 						}
 					else {
 						vendor.createSharedUrl (tab.url, function (publicUrl) {
-							//window.open (baseurl + encodeURIComponent (publicUrl));
-							$('#idtsFargo2WordLink').attr('href',baseurl + encodeURIComponent (publicUrl));
-							$('#idtsFargo2WordLink').click();
-							$('#idtsFargo2WordLink').attr('href','#');
+							window.open (baseurl + encodeURIComponent (publicUrl),'_blank');
+							//$('#idtsFargo2WordLink').attr('href',baseurl + encodeURIComponent (publicUrl));
+							//$('#idtsFargo2WordLink').click();
+							//$('#idtsFargo2WordLink').attr('href','#');
 							},
 							function () {
 								alertDialog ("Can't open the outline \"" + tab.title + "\" in Taco Pie."); 
