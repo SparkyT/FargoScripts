@@ -138,11 +138,16 @@ var tsFargo = {
 							},
 							function () {
 								alertDialog ("Can't open the outline \"" + tab.title + "\" in Taco Pie."); 
+								tsFSURL='failed';
 								}
 							);
 						}
 						alert(tsFSURL);
-					if (tsFSURL!='')
+					while(tsFSURL=='')
+					{
+						
+					}
+					if (tsFSURL!='failed')
 					{
 						window.open (tsFSURL,'_blank');
 					}
