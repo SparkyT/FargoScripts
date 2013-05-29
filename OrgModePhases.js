@@ -56,9 +56,12 @@ $(document).bind('keydown', function(event) {
 });
 
 
+
+
+
 var myFM2Word = $('#idtsFargo2Word');
 if(myFM2Word.length === 0){
-	myFM2Word = $('<li class="divider"></li><li id="idtsFargo2Word"><a onclick="tsFargo.tsFS();">Export to Word</a></li>')
+	myFM2Word = $('<li class="divider"></li><li id="idtsFargo2Word"><a onclick="tsFargo.tsFS();">* Export to Word</a></li>')
         .appendTo('#idFileMenu ul.dropdown-menu');    
 }
 
@@ -110,6 +113,22 @@ var tsFargo = {
 					var tab = smallTabs.getActiveTab ();
 					var tabTitle = tab.getTitle();
 					var tabUrl = tab.url;
+					// direct from fargo.io;
+					var tab = smallTabs.getActiveTab ();
+					var baseurl = "http://www.trinity-urc.org.uk/fargo/xml.php?fargoOPML=";
+					if (tab.type == "watchedOutline") {
+						window.open (baseurl + encodeURIComponent (tab.url));
+						}
+					else {
+						vendor.createSharedUrl (tab.url, function (publicUrl) {
+							window.open (baseurl + encodeURIComponent (publicUrl));
+							},
+							function () {
+								alertDialog ("Can't open the outline \"" + tab.title + "\" in Taco Pie."); 
+								}
+							);
+						}
+/*						
 					if(tab.flEditable && (tab.url!==undefined)){
 						confirmDialog ("Create a public link for the \""+tabTitle+"\" file?",function(){
 							vendor.createSharedUrl(tabUrl, function(publicUrl){
@@ -119,5 +138,5 @@ var tsFargo = {
 							});
 						}
 					}
- 
+*/
 }
