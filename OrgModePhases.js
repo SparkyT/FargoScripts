@@ -141,6 +141,7 @@ var tsFargo = {
 								}
 							);
 						}
+						alert(TSFSURL);
 					if (tsFSURL!='')
 					{
 						window.open (tsFSURL,'_blank');
