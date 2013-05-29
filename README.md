@@ -1,6 +1,6 @@
 # Fargo Scripts
 
-This is a repo of some simple scripts I've made to augment fargo.
+At the moment, just adds an Export to HTML list menu item.
 
 # To Use
 
