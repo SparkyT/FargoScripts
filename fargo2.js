@@ -11,7 +11,7 @@ else {
 	$('#tsFargoDivider').remove();
 }
 // Add the divider and Export to HTML list
-myFM2Word = $('<li id="tsFargoDivider" class="divider"></li><li id="tsFargo2HTMLList"><a onclick="tsFargo.tsF2HTMLList();">* Export to HTML list</a></li>').appendTo('#idFileMenu ul.dropdown-menu');    
+myFM2Word = $('<li id="tsFargoDivider" class="divider"></li><li id="tsFargo2HTMLList"><a onclick="tsFargo.tsF2HTMLList();">* Export to HTML list</a></li><li id="tsFargo2Pres"><a onclick="tsFargo.tsF2Pres();">* Export to presentation</a></li>').appendTo('#idFileMenu ul.dropdown-menu');    
 
 
 var tsFargo = {
@@ -83,5 +83,14 @@ var tsFargo = {
 							);
 						}
 
-  				},	
+  				},
+tsF2Pres:				function file2Pres (){
+					
+					var baseurl = 'http://render.scripting.com/ajax/viewPresentation?type=presentation&opmltext=';
+					baseurl=baseurl +  encodeURIComponent (opCursorToXml ());
+					
+					var w = window.open( baseurl  );
+
+
+  				},	  				
 }
